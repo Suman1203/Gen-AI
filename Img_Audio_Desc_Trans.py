@@ -28,7 +28,7 @@ def change_language(language):
 if uploaded_file and user_prompt:
     try:
         if 'description' not in st.session_state:
-            api_key = "AIzaSyAo8DUEQwFUqoJRH_PG1WjxmfSyj-5WwG8"
+            api_key = "api_key"
             genai.configure(api_key=api_key)
             model = genai.GenerativeModel('gemini-1.0-pro-vision-latest')
             st.session_state.img = Image.open(uploaded_file)
