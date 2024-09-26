@@ -4,7 +4,7 @@ import google.generativeai as genai
 from PIL import Image
 
 ####### Provide your api key ###################
-api_key="AIzaSyAo8DUEQwFUqoJRH_PG1WjxmfSyj-5WwG8"
+api_key="Api_key"
 genai.configure(api_key=api_key)
 
 ######## Choose the heading ###############
@@ -26,3 +26,6 @@ if st.button("GET RESPONSE"):
     model=genai.GenerativeModel("gemini-1.0-pro-vision-latest")
     response=model.generate_content([prompt,img])
     st.markdown(response.text)
+
+!streamlit run /content/Streamlit_image_app.py  & npx localtunnel --port 8501 & curl ipv4.icanhazip.com
+     
