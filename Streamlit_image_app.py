@@ -26,6 +26,9 @@ if st.button("GET RESPONSE"):
     model=genai.GenerativeModel("gemini-1.0-pro-vision-latest")
     response=model.generate_content([prompt,img])
     st.markdown(response.text)
-
+## run this on command prompt
+!pip install google-generativeai
+!pip install streamlit
+!npm install localtunel
 !streamlit run /content/Streamlit_image_app.py  & npx localtunnel --port 8501 & curl ipv4.icanhazip.com
      
